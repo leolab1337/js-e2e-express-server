@@ -32,6 +32,7 @@ app.get("/complement", function(req, res) {
     .end();
 });
 
+app.use("/public", express.static("./public"));
 const port = process.env.PORT || 3000;
 app.listen(port);
 console.log(`listening on http://localhost:${port}`);
